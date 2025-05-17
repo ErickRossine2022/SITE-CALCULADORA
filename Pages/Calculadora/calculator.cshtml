@@ -1,0 +1,117 @@
+﻿@page
+@model CalculatorModel
+@{
+    ViewData["Title"] = "Calculator By Blankill";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/CalculadoraPasta/calculator.css" />
+</head>
+<body>
+    <!-- Navegacao -->
+    <header class="Cabeca">
+        <nav class="Navegar-Por-Paginas">
+            <a class="BotaoHome" asp-page="/Index">Lar</a>
+            <a class="Calculadora" href="/Calculadora/calculator">Calculadora</a>
+            <a class="Comunidade" href="https://discord.gg/pxW2PQj3Dg">Comunidade</a>
+            <a class="Youtube" href="https://www.youtube.com/@@erickd7s" target="_blank">YouTube</a>
+            <a class="GitHubS" href="https://github.com/ErickRossine2022?tab=repositories&type=public">GitHub</a>
+            <a class="LinkedinWEB" href="https://www.linkedin.com/in/erick-rossine-366032365/">LinkedIn</a>
+            <a class="Privacidade" asp-page="/Privacy">Política de Privacidade</a>
+        </nav>
+    </header>
+
+    <!-- Conteudo Principal -->
+    <main class="Conteudo">
+        <div class="container">
+            <h1>Calculadora Digital Online</h1>
+            <div class="calculator">
+                <input type="text" id="display" class="display" disabled />
+                <div class="buttons">
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="toggleSign()">±</button>
+                    <button onclick="calculatePercentage()">%</button>
+                    <button onclick="appendValue('÷')">÷</button>
+
+                    <button onclick="appendValue('7')">7</button>
+                    <button onclick="appendValue('8')">8</button>
+                    <button onclick="appendValue('9')">9</button>
+                    <button onclick="appendValue('×')">×</button>
+
+                    <button onclick="appendValue('4')">4</button>
+                    <button onclick="appendValue('5')">5</button>
+                    <button onclick="appendValue('6')">6</button>
+                    <button onclick="appendValue('-')">-</button>
+
+                    <button onclick="appendValue('1')">1</button>
+                    <button onclick="appendValue('2')">2</button>
+                    <button onclick="appendValue('3')">3</button>
+                    <button onclick="appendValue('+')">+</button>
+
+                    <button onclick="appendValue('0')">0</button>
+                    <button onclick="appendValue('.')">.</button>
+                    <button onclick="squareValue()">x²</button>
+                    <button onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    function appendValue(value) {
+        const display = document.getElementById('display');
+
+        // Substitui × por * e ÷ por /
+        if (value === '×') value = '*';
+        if (value === '÷') value = '/';
+
+        display.value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+
+    function toggleSign() {
+        const display = document.getElementById('display');
+        if (display.value.startsWith('-')) {
+            display.value = display.value.substring(1);
+        } else if (display.value) {
+            display.value = '-' + display.value;
+        }
+    }
+
+    function calculatePercentage() {
+        const display = document.getElementById('display');
+        try {
+            display.value = parseFloat(display.value) / 100;
+        } catch {
+            display.value = 'Erro';
+        }
+    }
+
+    function squareValue() {
+        const display = document.getElementById('display');
+        try {
+            display.value = Math.pow(parseFloat(display.value), 2);
+        } catch {
+            display.value = 'Erro';
+        }
+    }
+
+    function calculate() {
+        const display = document.getElementById('display');
+        try {
+            display.value = eval(display.value);
+        } catch {
+            display.value = 'Erro';
+        }
+    }
+</script>
+</body>
+</html>

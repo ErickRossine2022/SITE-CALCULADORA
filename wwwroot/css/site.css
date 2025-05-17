@@ -1,0 +1,121 @@
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+
+
+/* Reset básico: zera margens e padding de todos os elementos, evita heranças indesejadas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+    text-decoration: none; /* Remove sublinhado de links */
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-size: 100%;
+    background-image: url('../Imagem/FundoWebSite.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* fundo escuro transparente */
+    z-index: -1;
+}
+
+.Cabeca {
+    display: flex;
+    flex-direction: row; /* Alinha em linha */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-around; /* Espaço entre logo e navegação */
+    padding: 24px;
+}
+.Navegar-Por-Paginas {
+    display: flex;
+    gap: 24px; /* Espaço entre os botões/links */
+}
+
+.BotaoHome,
+.Calculadora,
+.Comunidade,
+.Youtube,
+.GitHubS,
+.LinkedinWEB,
+.Privacidade {
+    font-family: "Merriweather", serif;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+.Conteudo {
+    border-top: 0.4px solid #ff9900; /* Linha superior divisória */
+    margin-bottom: 48px; /* Espaço abaixo */
+}
+
+.Conteudo-Inscrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 35px;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+}
+
+.Conteudo-Principal-Titulo {
+    color: #ffffff;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    font-style: normal;
+}
+
+.Conteudo-Paragrafo,
+.Conteudo-ParagrafoDois,
+.Conteudo-Paragrafotres{
+    font-family: "Merriweather", serif;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 18px;
+    font-style: normal;
+}
+
+
+.Imagem-Criador {
+    border: none;
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 4px 5px 4px rgb(43, 33, 33); /* Sombra */
+    height: 330px;
+    max-width: 100%;
+    flex: 0 0 auto;
+}
+
+.Texto-Criador {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+

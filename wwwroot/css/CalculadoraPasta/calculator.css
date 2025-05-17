@@ -1,0 +1,113 @@
+﻿/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Corpo do site */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/Imagem/FundoWebSite.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho fixo no topo */
+.Cabeca {
+    width: 100%;
+    background-color: #8B0000; /* cor de fundo do cabeçalho (vermelho escuro) */
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Navegação */
+.Navegar-Por-Paginas {
+    display: flex;
+    gap: 30px;
+}
+
+    .Navegar-Por-Paginas a {
+        color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+        .Navegar-Por-Paginas a:hover {
+            color: gold;
+        }
+
+/* Container da calculadora */
+.container {
+    margin-top: 150px; /* espaço para não ficar atrás do cabeçalho */
+    text-align: center;
+}
+
+/* Calculadora */
+.calculator {
+    background: #1c1f26;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Display */
+.display {
+    width: 100%;
+    font-size: 2em;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    border-radius: 5px;
+    background: #2a2d35;
+    color: white;
+}
+
+/* Botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    background: #3a3f4b;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    button:hover {
+        background: #505664;
+    }
+
+    /* Cores especiais */
+    button.orange {
+        background: orange;
+    }
+
+    button.red {
+        background: crimson;
+    }
+
+    button.blue {
+        background: royalblue;
+    }

@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Calculator By Blankill";
+}
+
+<body>
+    <header class="Cabeca">
+
+        <nav class="Navegar-Por-Paginas">
+            <a class="BotaoHome" asp-page="/Index">Home</a>
+            <a class="Calculadora" href="/Calculadora/calculator">Calculator</a>
+            <a class="Comunidade" href="https://discord.gg/pxW2PQj3Dg">Comunidade</a>
+            <a class="Youtube" href="https://www.youtube.com/@@erickd7s" target="_blank">Youtube</a>
+            <a class="GitHubS" href="https://github.com/ErickRossine2022?tab=repositories&type=public">GitHub</a>
+            <a class="LinkedinWEB" href="https://www.linkedin.com/in/erick-rossine-366032365/">LinkedIn</a>
+            <a class="Privacidade" asp-page="/Privacy">Política de Privacidade</a>
+        </nav>
+    
+    </header>
+
+    <main class="Conteudo"> 
+        
+        <section class="Conteudo-Principal">
+            <div class="Conteudo-Inscrito"> 
+                <img class="Imagem-Criador" src="~/imagem/Criador.jpg" alt="Dev">
+
+                <div class="Texto-Criador">
+                    <h1 class="Conteudo-Principal-Titulo">Calculator</h1>
+                    <p class="Conteudo-Paragrafo">Hello! My name is <strong>Erick Rossine</strong>, but I use the Discord name <strong>! √ Blank1ll - [The-Dev]</strong> as my developer name</p>
+                    <p class="Conteudo-ParagrafoDois">I created this calculator website as the first serious project of my life using <strong>ASP.NET</strong> with <strong>Razor Pages</strong>.</p>
+                    <p class="Conteudo-Paragrafotres">It was an amazing experience, and I hope you enjoy using my project!</p>
+                </div>
+            </div>    
+            
+        </section>
+
+    </main>
+</body>
